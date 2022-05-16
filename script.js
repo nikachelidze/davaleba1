@@ -39,14 +39,11 @@ let user1 = {
  
 if (user1.age > 18 && user1.studentstatus == 'active' ){
         console.log('hello');
-}
-if (user1.name === 'levani') {
+} else if (user1.name === 'levani') {
     console.log('hello giorgi');
-}
-if (user1.studentstatus == 'active' || user1.age < 25) {
+} else if (user1.studentstatus == 'active' || user1.age < 25) {
     console.log('hello world'); 
-}
-else {
+} else {
     console.log('error');
 }
 // დავალება 5: მოცემულია მასივი:გამოიტანეთ მარტო სრტინგები;

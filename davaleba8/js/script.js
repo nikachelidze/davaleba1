@@ -71,6 +71,9 @@ let mainwrapper = document.getElementById('post-block-wraper');
 let overly = document.getElementById('overlaiid');
 let closeid = document.getElementById('closeid');
 let content = document.getElementById('content');
+let addpost = document.getElementById('add');
+// let overlyadd = document.getElementById('overlyidd');
+let form = document.getElementById('form');
 
 function ajax(url,callback){
     let req = new XMLHttpRequest();
@@ -87,8 +90,8 @@ function printdata(reqdata){
         divdata(e);
     })
 }
-
 function divdata(s){
+
     let div = document.createElement('div');
     div.classList.add('posts');
     div.setAttribute('data-id',s.id);
@@ -146,43 +149,29 @@ function overlaif(s){
     content.appendChild(span);
     content.appendChild(p);
 }
-//function deletep(){
-    //div.classList.add('active');
-
-//    mainwrapper.classList.add('active');
-//}
-// function deletep(id){
-//     let url =`https://jsonplaceholder.typicode.com/posts/${id}`;
-//     fetch(url, {
-//         method: 'DELETE'
-//     })
-//     .then( response => response.json())
-//     .then(reqdata => {
-//         console.log(reqdata);
-//     })
-// }
 
 
+//-----------------------------------
 
-// function row(){
-//     let divteg=document.createElement('div');
-//     divteg.setAttribute('id','washla');
-//     divteg.setAttribute('class','washlismeniu');
-//     let spanteg1=document.createElement('span')
-//     let spanteg2=document.createElement('span')
-//     let spanteg3=document.createElement('span')
-//     spanteg1.setAttribute('class','row');
-//     spanteg2.setAttribute('class','row');
-//     spanteg3.setAttribute('class','row');
-//     divteg.appendChild(spanteg1);
-//     divteg.appendChild(spanteg2);
-//     divteg.appendChild(spanteg3);
+form.addEventListener('submit', function(e){
+    e.preventDefault();
 
-//     divteg.addEventListener('click', function(){
-//         li.remove();
-//     })
-// //    li.appendChild(divteg);
-// //   ul.appendChild(li);
+    let formdata ={
+        title: e.target[0].value,
+        body: e.target[1].value
+    }
+    fetch('https://jsonplaceholder.typicode.com/posts',{
+        method: 'post',
+        body: JSON.stringify(formdata),
+        headers:{
+            'Content-type':'application/json; charset=UTF-8',
+        },
+    })
+    .then((response) => response.json())
+    .then((post) =>  save(post))
+})
 
-// }
+function save(lll){
+    divdata(lll);
+}
 

@@ -61,3 +61,26 @@
 .posts.active{
     display: none;
 }
+.add-post{
+margin-top: 50px;
+}
+
+form input{
+    width: 200px;
+    /* padding: 8px 0px;  */
+    outline: none;
+    margin: 10px 10px; 
+    border-radius: 20px;
+}
+form label{
+    font-size: 20px;
+}
+.overlyadd{
+    background-color: #0c4acf;
+}
+#addformpost{
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+}

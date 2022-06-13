@@ -7,6 +7,11 @@ formm.addEventListener('submit', function(e) {
   let firstname = document.getElementById('saxeli').value;
   let lastname  = document.getElementById('gvari').value;
   let title = document.getElementById('title').value;
+  let email = document.getElementById('email').value;
+  let phone = document.getElementById('phone').value;
+
+  let password1 = document.getElementById('pass').value;
+  let password2 = document.getElementById('gapass').value;
   
   if ( firstname.lenght < 2 || firstname === ''){
     errors.saxeli = 'სახელი არ შეიძლება იყოს 2 სიმბოლოზე ნაკლები ან ცარელა';
@@ -18,16 +23,21 @@ formm.addEventListener('submit', function(e) {
   } else {
     errors.gvari = '';
   }
-
   if ( title.lenght < 5 || title === ''){
     errors.title = 'ფსევდონიმი არ შეიძლება იყოს 5 სიმბოლოზე ნაკლები ან ცარელა';
   } else {
     errors.title = '';
   }
-  
-let password1 = document.getElementById('pass').value;
-let password2 = document.getElementById('gapass').value;
-
+  if ( email === ''){
+    errors.email = 'ელექტრონული ფოსტა არ შეიძლება იყოს ცარელა';
+  } else {
+    errors.email = '';
+  }
+  if ( phone === ''){
+    errors.phone = 'ტელეფონის ველი არ შეიძლება იყოს ცარელა';
+  } else {
+    errors.phone = '';
+  }
 if (password1 === ''){
   errors.pass ='პაროლი არ შეიძლება იყოს ცარელა';
 } else {
@@ -69,7 +79,7 @@ form.querySelectorAll('[name = "sqesi"]').forEach(x => {
 
 for (let y in errors){
 
-  let errorspan = document.getElementById('error_'+y);
+  let errorspan = document.getElementById('error_' + y);
       errorspan.textContent = errors[y];
 }
 

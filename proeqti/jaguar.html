@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="jaguar"> 
+    <meta name="description" content="Jaguar I-Pace არის ბრიტანული მარკის პირველი მთლიანად ელექტრო კროსოვერი ">
+    <link rel="stylesheet" href="css/mystil.css">
+    <title>jaguar</title>
+</head>
+<body>
+    <header id="headerjaguar" class="header">
+        <h1>Jaguar-ს მიერ შექმნილი მანქანები XE, XJ, I-Pace</h1>
+        <nav id="navmtavari"></nav>
+        <div id="burger" class="burger-meniu">
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+        </div>
+    </header>
+    <main>
+        <div class="mtavarigverdi">
+            <div class="marcxena">
+                <div class="avatar" id="avatarj" >
+                    <a href="#" > </a>
+                </div>
+                <div class="piradi">
+                  <h2> <a href="jaguar-istoria.html">jaguar-ის დაარსების ისტორია </a> </h2>
+                </div>
+                <div class="kategoriebi">
+                    <h3>
+                        <a href="jaguarxe.html">jaguar XE</a><br><br>
+                    </h3>
+                    <h3>
+                        <a href="jaguarxj.html">jaguar XJ</a><br><br>
+                    </h3>
+                    <h3>
+                        <a href="JaguarI-Pace.html">Jaguar I-Pace</a><br><br>
+                    </h3>
+                </div>
+                <div class="filtri">
+                    <input type="text" name="filtri" id="filter" placeholder="ფილტრი" >
+                </div>
+            </div>
+            <div class="marjvena" id="manqanebi"></div>
+        </div>
+        <div class="koment-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <div class="sasaubrosatauri">
+                    <div class="">
+                        <img src="img/icons/group.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="sasaubrosurati">
+                        <h3>კომენტარი</h3>
+                    </div>
+                </div>
+                <textarea placeholder="ტექსტის ჩასაწერი..." name="msg" required></textarea>
+                <button type="submit" class="btn">გაგზავნა</button>
+                <button type="button" class="btn cancel" onclick="sasaubrosdaxurva()">დახურვა</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footkon" id="fotter">
+        <div id="foot"></div>
+        <button class="sasaubro koment" onclick="sasaubrosgaxsna()">დატოვე კომენტარი</button>
+    </footer>
+    <script src="js/myjs.js"></script>
+</body>
+</html>

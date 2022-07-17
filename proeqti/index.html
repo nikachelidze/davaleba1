@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="მანქანა"> 
+    <meta name="description" content="სუპერ მანქანების მიმოხილვები და სიახლეები">
+    <link rel="stylesheet" href="css/mystil.css">
+    <title>მნქანა</title>
+</head>
+<body>
+    <header id="header">
+        <h1> მანქანის მწარმოებლები bmw ლამბორჯინი მუსტანგი იაგუარი</h1>
+        <nav id="regnav"></nav>
+        <div id="burger" class="burger-meniu">
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+        </div> 
+    </header>
+    <main>
+        <div class="mshobeli">
+            <div class="texsti">
+                <div class="avtoo">
+                    <div class="avto avto1">
+                        <img src="img/icons/sedan.png" alt="sedan">
+                    </div>
+                    <div class="avto avto2">
+                        <img src="img/icons/sedan.png" alt="sedan">
+                    </div>
+                    <div class="avto avto3">
+                        <img src="img/icons/sedan.png" alt="sedan">
+                    </div>
+                    <div class="avto avto4">
+                        <img src="img/icons/sedan.png" alt="sedan">
+                    </div>
+                </div>
+                <p>
+                    ინფორმაცია შენთვის ფავორიტი 
+                </p>
+                <p>
+                    მანქანის შესახებ
+                </p>
+            </div>
+            <div class="slaiderimshobeli">
+                <div class="slidershvili animacia">
+                    <img src="img/BMW/m5.jpg" alt="bnw m5" style="width: 100%;">
+                </div>
+                <div class="slidershvili animacia">
+                    <img src="img/mustangi/mustangi3.jpg" alt="ford mustang" style="width: 100%;">
+                </div>
+                <div class="slidershvili animacia">
+                    <img src="img/lamborgini/lamborgin3.jpg" alt="lambogin" style="width: 100%;">
+                </div>
+                <div class="slidershvili animacia">
+                    <img src="img/jaguar/jaguar.jpg" alt="jaguar" style="width: 100%;">
+                </div>
+                <div class="slidershvili animacia">
+                    <img src="img/camaro/camaro.jpg" alt="shevrolet camaro" style="width: 100%;">
+                </div>
+                <div class="slidershvili animacia">
+                    <img src="img/dodge/mazerati.jpg" alt="mazerati" style="width: 100%;">
+                </div>
+                <div class="slidershvili animacia">
+                    <img src="img/dodge/mazerati1.jpg" alt="mazerati" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+        <div class="logintxt">
+            <div class="login">
+                <h4> შ ე ს ვ ლ ა</h4>
+                <form action="mtavari.html" method="post" class="shesvla" id="shformid">
+                    <div class="suratemail">
+                        <div class="email"></div>
+                        <input type="email" name="email" id="fosta" placeholder="ელექტრონული ფოსტა" onkeydown="emailvalidacia()" >
+                    </div>
+                    <span class="error-text" id="error_semail"></span>    
+                    <div class="suratemail">
+                        <div class="kay"></div>  
+                        <input type="password" name="password" id="paroli" placeholder="პაროლი" >
+                    </div>
+                    <span class="error-text" id="error_spass"></span>
+                    <span class="error-text" id="error_shed"></span>
+                    <input type="submit" name="reg" class="submit">
+                </form>
+                <div id="api"></div>
+            </div>        
+            <div class="proeqtisshesaxeb" id="proeqtisshesaxeb">
+                <H4 id = 'newh4'></H4>
+                <div class="mtavari" id="mtavari"></div> 
+            </div>
+        </div>
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <div class="sasaubrosatauri">
+                    <div class="">
+                        <img src="img/icons/group.png" alt="" style="width: 100%;">
+                    </div>
+                    <div class="sasaubrosurati">
+                        <h3>სასაუბრო</h3>
+                    </div>
+                </div>
+                <textarea placeholder="ტექსტის ჩასაწერი..." name="msg" required></textarea>
+                <button type="submit" class="btn">გაგზავნა</button>
+                <button type="button" class="btn cancel" onclick="sasaubrosdaxurva()">დახურვა</button>
+            </form>
+        </div>
+        
+    </main>
+    <footer class="foot">
+        <div><p id="raod"></p></div> 
+        <div class="fut">
+            <div class="tel">
+                <img src="img/icons/mobile-phone.png" alt="">
+                <p>"ტელეფონის ნომერი"</p>
+            </div>
+            <div class="tel">
+                <img src="img/icons/placeholder.png" alt="">
+                <p>"მისამართი"</p>
+            </div>
+            <div class="tel">
+                <img src="img/icons/clock.png" alt="">
+                <p>"მუშაობის საათები"</p>
+            </div>
+        </div>
+        <button class="sasaubro" onclick="sasaubrosgaxsna()">ს ა ს ა უ ბ რ ო</button>
+    </footer>
+    <script src="js/myjs.js"></script>
+</body>
+</html>
